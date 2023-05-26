@@ -92,19 +92,6 @@ body {
     font-weight: 700;
 }
 
-.log-in::before {
-    position: absolute;
-    content: "";
-    display: block;
-    background-image: url("./../img/nav/account.svg");
-    background-size: contain;
-    width: 20px;
-    height: 20px;
-    left: -28px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
 .log-in a {
     transition: all 0.2s ease-in;
 }
@@ -112,6 +99,21 @@ body {
 .log-in a:hover {
     color: #0a1c26;
     border-bottom: 1px solid #0a1c26;
+}
+
+.log-in:hover svg path {
+    fill: #000;
+}
+
+svg path {
+    transition: all 0.2s ease-in;
+}
+
+.svg-move {
+    position: absolute;
+    left: -32px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .log-in:active {
@@ -213,14 +215,31 @@ body {
 }
 
 .description {
+    position: relative;
     display: flex;
+    padding-top: 141px;
     flex-direction: column;
     max-height: 439px;
     max-width: 632px;
 }
 
+.description::before {
+    display: block;
+    position: absolute;
+    content: attr(data-number);
+    font-family: 'Gilroy', sans-serif;
+    font-size: 240px;
+    line-height: 1;
+    font-weight: 700;
+    opacity: 10%;
+    left: -149px;
+    top: 37px;
+    
+}
+
 .content-preview {
     position: relative;
+    padding-left: 96px;
     padding-bottom: 27px;
     font-family: 'Gilroy', sans-serif;
     font-weight: 800;
@@ -238,7 +257,7 @@ body {
     width: 72px;
     height: 2px;
     background-color: #FBD784;
-    left: -96px;
+    left: 0;
     top: 11px;
 }
 
