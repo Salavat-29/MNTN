@@ -174,7 +174,7 @@ svg path {
 
 .nav-btn-media {
     right: 15px;
-    position: fixed;
+    /* position: fixed; */
     display: none;
     border: none;
     outline: none;
